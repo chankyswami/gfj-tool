@@ -1,0 +1,187 @@
+# Root level gitignore for GFJ Monorepo
+# This file covers common patterns across all projects
+# Project-specific rules are in their respective .gitignore files
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+.cache/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies (if using workspaces)
+node_modules/
+
+# Build outputs
+dist/
+build/
+target/
+
+# Coverage reports
+coverage/
+*.lcov
+.nyc_output
+
+# Test outputs
+test-output/
+reports/
+
+# Documentation builds
+docs/build/
+site/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Archive files
+*.7z
+*.bz2
+*.gz
+*.rar
+*.tar
+*.zip
+
+# Secrets and sensitive files
+secrets/
+*.key
+*.pem
+*.p12
+*.jks
+*.keystore
+*.truststore
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes
+*.kubeconfig
+
+# AWS
+.aws/
+
+# Local configuration files
+config/local/
+config/dev/
+config/prod/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.lock-wscript
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.parcel-cache
+
+# Storybook build outputs
+storybook-static
+.out
+.storybook-out
+
+# Local Netlify folder
+.netlify
+
+# Vite
+.vite/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Gradle
+.gradle
+!gradle/wrapper/gradle-wrapper.jar
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# Checkstyle
+checkstyle-result.xml
+
+# SpotBugs
+spotbugsXml.xml
+
+# JaCoCo
+target/site/jacoco/
+
+# SonarQube
+.sonar/
+
+# Project-specific overrides
+# These are handled by individual project .gitignore files
+# gfj-ui/.gitignore
+# gfj-be/.gitignore

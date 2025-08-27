@@ -1,0 +1,45 @@
+server:
+  port: 8081
+  # SSL Configuration - Comment out for HTTP development
+#  ssl:
+#    enabled: true
+#    key-store: classpath:keystore.p12
+#    key-store-password: Qazplm12345!
+#    key-store-type: PKCS12
+#    key-alias: gfj-myapi
+
+# Alternative HTTP configuration for development (uncomment the lines below and comment out SSL above)
+# server:
+#   port: 8080
+#   ssl:
+#     enabled: false
+
+spring:
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: jdbc:mysql://${DB-HOST}:${DB-HOST-PORT}/${DB-NAME}?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&nullCatalogMeansCurrent=true
+    username: ${DB-USERNAME}
+    password: ${DB-PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+      database: mysql
+      database-platform: org.hibernate.dialect.MySQL8Dialect
+#  flyway:
+#    user: ${DB-USERNAME}
+#    password: ${DB-PASSWORD}
+
+logging:
+  level:
+    org:
+      hibernate:
+        orm:
+          jdbc:
+            bind: trace
